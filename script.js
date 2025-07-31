@@ -1,7 +1,7 @@
 // Part 1
 // Create Student object
 let student = {
-  name: "Moteen",
+  fName: "Moteen",
   age: 30,
   enrolled: true,
   courses: [
@@ -13,7 +13,7 @@ let student = {
   ],
   info: function () {
     console.log(
-      "Student name: " + this.name,
+      "Student name: " + this.fName,
       "Student age: " + this.age,
       "Enrolled in school: ",
       +this.enrolled,
@@ -23,7 +23,7 @@ let student = {
 };
 
 student.info();
-console.log(student.name);
+console.log(student.fName);
 console.log(student.age);
 
 // Part 2
@@ -34,3 +34,35 @@ console.log(jsonString);
 // Convert JSON back into javascript object
 let parseStudent = JSON.parse(jsonString);
 console.log(parseStudent);
+
+// Part 3
+// destructure name and courses
+const { fName, courses } = student;
+console.log("Name: ", fName);
+console.log("Courses: ", courses);
+
+// create an array of scores
+// destructure first 2 scores from the array
+let scores = [85, 92, 74, 68, 22, 50];
+const [firstScore, secondScore] = scores;
+console.log("First Score: ", firstScore);
+console.log("Second Score: ", secondScore);
+
+//Part 4
+// The Spread Operator
+const copyStudent = { ...student };
+console.log(copyStudent);
+
+let cloneStudent = {
+  ...student,
+  graduationYear: 2027,
+};
+
+console.log(cloneStudent);
+
+// merge 2 array together
+let newCourse = ["React", "Python"];
+
+let allCourse = [...student.courses, ...newCourse];
+
+console.log(allCourse);

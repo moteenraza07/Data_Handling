@@ -1,4 +1,4 @@
-// Part 1
+// Part 1 & 5
 // Create Student object
 let student = {
   fName: "Moteen",
@@ -20,11 +20,27 @@ let student = {
       "Course names:  " + this.courses
     );
   },
+  // part 5 create a method to add new course
+  addCourse: function (newCourse) {
+    this.courses.push(newCourse);
+    console.log("The new course is: ", newCourse);
+  },
+  // part 5 create total course count method
+  totalCourses: function () {
+    return this.courses.length;
+  },
 };
 
 student.info();
 console.log(student.fName);
 console.log(student.age);
+
+// part 5
+student.addCourse("Math");
+console.log("Updated course: ", student.courses);
+// part 5
+student.totalCourses();
+console.log(student.totalCourses());
 
 // Part 2
 // converting the student object to JSON String
@@ -66,3 +82,5 @@ let newCourse = ["React", "Python"];
 let allCourse = [...student.courses, ...newCourse];
 
 console.log(allCourse);
+
+// Step 5

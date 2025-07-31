@@ -1,0 +1,12 @@
+{
+  "name": "Moteen",
+  "age": 30,
+  "enrolled": true,
+  "courses": [
+    "javascript",
+    "Web design",
+    "Data Base",
+    "Tech writing",
+    "Algorithms"
+  ]
+}

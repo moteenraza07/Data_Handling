@@ -83,4 +83,10 @@ let allCourse = [...student.courses, ...newCourse];
 
 console.log(allCourse);
 
-// Step 5
+//Bonus
+
+let totalScore = [90, 75, 44, 88, 67, 58];
+
+let total = totalScore.reduce((sum, scores) => sum + scores, 0);
+let average = total / totalScore.length;
+console.log(average);

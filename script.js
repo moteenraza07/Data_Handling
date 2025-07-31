@@ -11,6 +11,8 @@ let student = {
     "Tech writing",
     "Algorithms",
   ],
+
+  // method that displays basic student info
   info: function () {
     console.log(
       "Student name: " + this.fName,
